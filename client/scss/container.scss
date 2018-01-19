@@ -1,0 +1,10 @@
+@import "./_variables.scss";
+
+
+.container {
+  max-width: 100%;
+  width: $site-width;
+  margin: 0 auto;
+  padding: 12px;
+  box-sizing: border-box;
+}

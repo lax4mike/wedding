@@ -1,0 +1,60 @@
+@import "./_variables.scss";
+
+// sass-lint:disable no-vendor-prefixes
+
+nav {
+  position: sticky;
+  // when top: 0, and sticky there was a space between the nav and
+  // the top of the viewport. not sure why...
+  top: -1px;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: $z-nav;
+
+}
+
+
+.nav__container {
+
+  display: flex;
+  box-sizing: border-box;
+  overflow-x: auto;
+  max-width: 100%;
+
+  // justify-content: center; this messes up the overflow-x;
+  // using margins on nav__item:first/last-child instead
+
+
+  // hide the scrollbar!
+  // TODO test in safari on iOS
+  // sass-lint:disable-block no-vendor-prefixes, no-duplicate-properties
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav__item {
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+
+    a {
+      padding: 6px 12px;
+      color: #444;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    &:hover a,
+    &.is-active a {
+      text-decoration: underline;
+    }
+  }
+
+}

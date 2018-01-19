@@ -1,0 +1,18 @@
+@import "../../../scss/_variables.scss";
+
+.map-info-window {
+  padding: 14px 0 10px;
+  font-family: $open;
+  font-size: 16px;
+}
+
+.map-info-window__name {
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+.map-info-window__address {
+  margin: 10px 0;
+  line-height: 1.2em;
+}

@@ -1,0 +1,7 @@
+section {
+  padding: 12px 0;
+
+  & + section {
+    margin-top: 200px;
+  }
+}

@@ -1,0 +1,21 @@
+- [ ] MVP
+  - [x] Date
+    - [x] Days until
+  - [x] Location
+    - [ ] Mention "Outside on the lawn" so those ladies can properly choose their footwear
+    - [ ] Something about the weather
+  - [ ] Accommodations
+    - [ ] White mountain hotel
+    - [ ] Air bnb, vrbo
+  - [ ] Travel
+  - [ ] Contact (email? phone number?)
+
+- [ ] Phase II
+  - [ ] Schedule
+    - [ ] Welcome drinks
+    - [ ] Wedding
+    - [ ] Reception
+  - [ ] Registry info
+  - [ ] Local activities
+  - [ ] How we met?? (combine with photos?)
+  - [ ] Photos

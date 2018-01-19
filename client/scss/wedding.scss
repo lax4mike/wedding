@@ -1,0 +1,36 @@
+@import "./_variables.scss";
+
+.wedding {
+  font-family: $alegreya;
+  text-align: center;
+}
+
+.wedding__names {
+  font-size: 54px;
+}
+
+.wedding__date {
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+.wedding__from-now {
+  font-size: 18px;
+}
+
+.wedding__hotel {
+  padding: 24px 0;
+  font-size: 24px;
+  line-height: 1em;
+}
+
+.wedding__blurb {
+}
+
+.wedding__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  max-width: 100%;
+}
