@@ -7,7 +7,7 @@ import debounce from "lodash.debounce";
 
 import { NavLink } from "react-router-dom";
 
-import { getOffsetTop, getScrollTop } from "../../scrollHelpers.js";
+import { getOffsetTop, getScrollTop, measureNavContainerOffset } from "../../scrollHelpers.js";
 
 import { object } from "prop-types";
 
@@ -94,7 +94,7 @@ export default class Navigation extends React.Component {
       return {
         el,
         id,
-        top: getOffsetTop(el) - 24, // minus offset
+        top: getOffsetTop(el),
         title: titlizeId(id)
       };
     });
@@ -105,9 +105,14 @@ export default class Navigation extends React.Component {
 
     const sections = this.findSections();
 
-    // TODO make this smarter
+    const ACTIVE_OFFSET = 100;
+
+    // TODO make this smarter by measuring how much of each
+    // section is visible
     const activeSectionObj = sections.reduce((active, section) => {
-      const past = getScrollTop() - section.top;
+
+      const past = getScrollTop() - section.top
+        + measureNavContainerOffset() + ACTIVE_OFFSET;
       return (past >= 0 && past < active.past)
         ? { past, section }
         : active;
@@ -132,7 +137,7 @@ export default class Navigation extends React.Component {
 
     return (
       <nav>
-        <div className="nav__container container" ref={el => this.container = el}>
+        <div className="nav__container container js-nav-container" ref={el => this.container = el}>
           {sections.map((section, i) => {
             const classes = classNames("nav__item", {
               "is-active": section.id === activeSectionId

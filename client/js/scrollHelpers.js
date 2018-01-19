@@ -1,4 +1,4 @@
-
+import R from "ramda";
 
 // Element -> Number
 export function getOffsetTop(element) {
@@ -12,6 +12,11 @@ export function getOffsetTop(element) {
 export function getScrollTop(){
   return document.documentElement.scrollTop || document.body.scrollTop;
 }
+
+export const measureNavContainerOffset = R.tryCatch(
+  () => document.querySelector(".js-nav-container").offsetHeight,
+  () => 0
+);
 
 
 export function scrollTo(top){

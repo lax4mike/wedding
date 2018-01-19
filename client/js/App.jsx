@@ -2,7 +2,7 @@ import React from "react";
 import R from "ramda";
 
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
-import { getOffsetTop, scrollTo } from "./scrollHelpers.js";
+import { getOffsetTop, scrollTo, measureNavContainerOffset } from "./scrollHelpers.js";
 
 import Home from "./pages/Home.jsx";
 
@@ -28,7 +28,7 @@ class App extends React.Component {
       const el = document.querySelector(hash);
 
       if (el){
-        scrollTo(getOffsetTop(el));
+        scrollTo(getOffsetTop(el) - measureNavContainerOffset());
       }
     }
     // if the user clicked the footer nav or some other link mid-page,
