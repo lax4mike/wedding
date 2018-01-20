@@ -1,16 +1,23 @@
 @import "./_variables.scss";
 
 .wedding {
-  font-family: $alegreya;
   text-align: center;
 }
 
+
 .wedding__names {
+  font-family: $alegreyaSC;
   font-size: 54px;
 }
 
+.wedding__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .wedding__date {
-  padding: 24px 0;
+  padding: 24px 12px;
   font-size: 24px;
 }
 
@@ -19,7 +26,7 @@
 }
 
 .wedding__hotel {
-  padding: 24px 0;
+  padding: 24px 12px;
   font-size: 24px;
   line-height: 1em;
 }

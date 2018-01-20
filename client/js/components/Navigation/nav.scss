@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@import "../../../scss/_variables.scss";
 
 // sass-lint:disable no-vendor-prefixes
 
@@ -8,14 +8,15 @@ nav {
   // the top of the viewport. not sure why...
   top: -1px;
   background-color: white;
+  box-shadow: 1px 2px 10px rgba($grey, 0.2);
   box-sizing: border-box;
   z-index: $z-nav;
+  border-bottom: 1px solid $grey;
 
 }
 
 
 .nav__container {
-
   display: flex;
   box-sizing: border-box;
   overflow-x: auto;

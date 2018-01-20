@@ -14,9 +14,8 @@ const Home = (props) => {
 
       <h1 className="wedding__names">Sarah & Mike</h1>
 
-      <hr />
+      <hr style={{ marginBottom: 0 }} />
       <Navigation />
-      <hr />
 
       <div className="hero">
         <div className="hero__img">
@@ -29,18 +28,19 @@ const Home = (props) => {
       <div className="container">
         <section id="the-wedding" className="wedding">
 
-
-          <div className="wedding__date">
-            September 15, 2018
-            <div className="wedding__from-now">
-              {weddingDate.fromNow()}
+          <div className="wedding__info">
+            <div className="wedding__date">
+              September 15, 2018
+              <div className="wedding__from-now">
+                {weddingDate.fromNow()}
+              </div>
             </div>
-          </div>
 
-          <div className="wedding__hotel">
-            White Mountain Hotel
-            <br/>
-            North Conway, NH
+            <div className="wedding__hotel">
+              White Mountain Hotel
+              <br/>
+              North Conway, NH
+            </div>
           </div>
 
 
@@ -55,7 +55,7 @@ const Home = (props) => {
           <div>
             <h3>White Mountain Hotel</h3>
             <p>
-              We have reserved a room block at the White Mountain Hotel, which will be released August 15. During peak season, the hotel requires a two night minimum stay.  Active military, AAA, and ? discounts are offered.  Breakfast is also included in the nightly rate.
+              We have reserved a room block at the White Mountain Hotel, which will be released August 15. During peak season, the hotel requires a two night minimum stay.  Active military, AAA, and <span className="highlight">?</span> discounts are offered.  Breakfast is also included in the nightly rate.
             </p>
             <p>
               There are many other lodging options in North Conway and nearby towns, such as Intervale.  There are many chain hotels and some smaller motels. We have personally stayed at the White Trellis and the Swiss Chalet. Airbnb and VRBO are also great options for renting condos or houses that can accomodate multiple people.
