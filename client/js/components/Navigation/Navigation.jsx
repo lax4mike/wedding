@@ -7,7 +7,7 @@ import debounce from "lodash.debounce";
 
 import { NavLink } from "react-router-dom";
 
-import { getOffsetTop, getScrollTop, measureNavContainerOffset } from "../../scrollHelpers.js";
+import { getDocumentHeight, getScrollTop, measureNavContainerOffset } from "../../scrollHelpers.js";
 
 import { object } from "prop-types";
 
@@ -18,25 +18,21 @@ export default class Navigation extends React.Component {
   };
 
   state = {
-    isMobile: false,
     activeSectionId: "",
     sections: []
   };
 
   componentWillMount = () => {
     this.links = {};
-    this.handleResize();
   }
 
   componentDidMount = () => {
-    window.addEventListener("resize", this.handleResize);
     document.addEventListener("scroll", this.handleScroll);
 
     this.handleScroll();
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener("resize", this.handleResize);
     document.removeEventListener("scroll", this.handleScroll);
   }
 
@@ -55,11 +51,11 @@ export default class Navigation extends React.Component {
     }
   }
 
-  updateHash = debounce((id) => {
+  updateHash = (id) => {
     const hash = id ? "#" + id : "";
     const newLocation = window.location.pathname + window.location.search + hash;
     history.replaceState(null, null, newLocation);
-  }, 300)
+  }
 
   scrollNavToSection = (section) => {
     const el = this.links[section];
@@ -75,54 +71,55 @@ export default class Navigation extends React.Component {
     }
   }
 
-
-  handleResize = throttle(e => {
-
-    const windowWidth = window.innerWidth;
-
-    this.setState({
-      isMobile: (windowWidth < 900)
-    });
-
-  }, 100);
-
-  findSections = throttle(() => {
+  findSections = () => {
     const allSections = [...document.querySelectorAll("section[id]")]; // NodeList to Array
 
     return allSections.map(el => {
       const id = el.getAttribute("id");
+
+      const rect = el.getBoundingClientRect();
       return {
         el,
         id,
-        top: getOffsetTop(el),
+        rect,
         title: titlizeId(id)
       };
     });
 
-  }, 1000);
+  };
 
-  handleScroll = e => {
+  handleScroll = throttle(e => {
 
     const sections = this.findSections();
 
-    const ACTIVE_OFFSET = 100;
+    const getPercetageVisible = (section) => {
+      const { top, bottom, height } = section.rect;
 
-    // TODO make this smarter by measuring how much of each
-    // section is visible
-    const activeSectionObj = sections.reduce((active, section) => {
+      const hiddenBefore = Math.abs(Math.min(0, top));
+      const hiddenAfter = Math.max(0, bottom - window.innerHeight);
 
-      const past = getScrollTop() - section.top
-        + measureNavContainerOffset() + ACTIVE_OFFSET;
-      return (past >= 0 && past < active.past)
-        ? { past, section }
-        : active;
-    }, { past: Infinity });
+      const percentage = Math.max(0, (height - hiddenBefore - hiddenAfter) / height);
 
-    this.setState({
-      activeSectionId: R.path(["section", "id"], activeSectionObj),
-      sections
-    });
-  }
+      return percentage;
+    };
+
+    const isScrollAtBottom = (getScrollTop() + window.innerHeight) === getDocumentHeight();
+    const reduce = isScrollAtBottom ? R.reduce : R.reduceRight;
+
+
+    const activeSectionId = R.compose(
+      R.path(["section", "id"]),
+      R.reduce((active, section) => {
+        const percentage = getPercetageVisible(section);
+
+        return (percentage > active.percentage)
+          ? { percentage, section }
+          : active;
+      }, { percentage: .1 }) // at least 0.1
+    )(sections);
+
+    this.setState({ activeSectionId, sections });
+  }, 250)
 
   registerLink = id => el => {
     this.links[id] = el;
@@ -131,9 +128,7 @@ export default class Navigation extends React.Component {
   render = () => {
 
     const {  } = this.props;
-    const {
-      // isMobile // do i need this?
-      activeSectionId, sections } = this.state;
+    const { activeSectionId, sections } = this.state;
 
     return (
       <nav>

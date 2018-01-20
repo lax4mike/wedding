@@ -17,4 +17,8 @@
   border: 1px solid $grey;
   padding: 12px;
   width: 600px;
+
+  @media (max-width: 700px) {
+    border-color: transparent;
+  }
 }

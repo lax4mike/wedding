@@ -9,8 +9,12 @@ export function getOffsetTop(element) {
 
 
 // cross browser schinanigans
-export function getScrollTop(){
+export function getScrollTop() {
   return document.documentElement.scrollTop || document.body.scrollTop;
+}
+
+export function getDocumentHeight() {
+  return document.documentElement.offsetHeight || document.body.offsetHeight;
 }
 
 export const measureNavContainerOffset = R.tryCatch(
