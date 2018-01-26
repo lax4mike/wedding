@@ -103,8 +103,6 @@ export default class Navigation extends React.Component {
       return percentage;
     };
 
-    const isScrollAtBottom = (getScrollTop() + window.innerHeight) === getDocumentHeight();
-    const reduce = isScrollAtBottom ? R.reduce : R.reduceRight;
 
 
     const activeSectionId = R.compose(

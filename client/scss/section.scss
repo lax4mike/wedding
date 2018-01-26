@@ -1,7 +1,7 @@
+@import "./_variables.scss";
+
 section {
   padding: 12px 0;
-
-  & + section {
-    margin-top: 200px;
-  }
+  margin-bottom: 112px;
+  border-top: 1px solid $grey;
 }

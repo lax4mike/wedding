@@ -1,11 +1,19 @@
 import React from "react";
+import R from "ramda";
+import moment from "moment";
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyAGpHR4gvWgMUxu3kLKFIq2_izh2AhXeuo"
+import RightArrow from "../Svg/RightArrow.jsx";
+
+const GOOGLE_MAPS_API_KEY = "AIzaSyAGpHR4gvWgMUxu3kLKFIq2_izh2AhXeuo";
 
 // https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder
 const WHITE_MOUNTAIN_HOTEL_PLACE_ID = "ChIJJXxDY1mgs0wRz_hXdQjasWU";
 
-export default class Map extends React.Component {
+export default class TheWedding extends React.Component {
+
+  state = {
+    placeInfo: null
+  }
 
   componentDidMount = () => {
     loadScript(`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`)
@@ -16,7 +24,6 @@ export default class Map extends React.Component {
 
     const map = new window.google.maps.Map(this.map, {
       zoom: 16,
-      // zoom: 18,
       center: { lat: -36.866, lng: 151.196 },
       mapTypeId: "satellite"
     });
@@ -61,15 +68,58 @@ export default class Map extends React.Component {
       openInfoWindow();
       window.google.maps.event.addListener(marker, "click", openInfoWindow);
 
+      this.setState({
+        placeInfo: place
+      });
+
     });
 
   }
 
-  render = (props) => {
+  render = () => {
+
+    const { placeInfo } = this.state;
+
+    // TODO make sure the timezone is correct
+    const weddingDate = moment("2018-09-15 3pm -04", "YYYY-MM-DD ha Z");
+    // console.log(weddingDate);
+
     return (
-      <div className="map"
-        ref={el => this.map = el}
-      />
+      <div className="wedding">
+        <div className="wedding__info">
+          <div className="wedding__date">
+            September 15, 2018
+            <div className="wedding__from-now">
+              ({weddingDate.fromNow()})
+            </div>
+          </div>
+
+          <div className="wedding__hotel">
+            <div>
+              White Mountain Hotel
+              <br/>
+              North Conway, NH
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className="wedding__map">
+          <div className="map"
+            ref={el => this.map = el}
+          />
+        </div>
+        <div className="wedding__map-link">
+          <a href={R.prop("url", placeInfo)}
+            className="btn btn--external"
+            target="_blank"
+          >
+            White Mountain Hotel on Google maps
+            <RightArrow />
+          </a>
+        </div>
+      </div>
     );
   }
 }

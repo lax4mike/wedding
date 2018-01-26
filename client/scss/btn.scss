@@ -1,0 +1,27 @@
+@import "./_variables.scss";
+
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+
+  background-color: $blue;
+  border-radius: 4px;
+
+  .icon {
+    margin-left: 6px;
+  }
+}
+
+.btn--external {
+  background-image: url("../img/arrow-right.svg");
+}
+
+.btn__holder {
+  text-align: center;
+  margin-bottom: 24px;
+}

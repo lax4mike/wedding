@@ -1,0 +1,66 @@
+@import "../../../scss/_variables.scss";
+
+.wedding {
+  text-align: center;
+}
+
+
+.wedding__names {
+  font-family: $alegreyaSC;
+  font-size: 54px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+
+  background-color: $blue;
+
+  h1 {
+    color: white;
+  }
+
+  @supports (background-blend-mode: multiply) {
+    background-image: url("../img/rock-texture.jpg");
+    background-blend-mode: multiply;
+  }
+}
+
+.wedding__info {
+
+}
+
+.wedding__date {
+  padding: 24px 12px;
+  font-size: 24px;
+}
+
+.wedding__from-now {
+  font-size: 18px;
+}
+
+.wedding__hotel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 24px 12px;
+  font-size: 24px;
+  line-height: 1em;
+}
+
+.wedding__map-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.wedding__blurb {
+}
+
+.wedding__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  max-width: 100%;
+}
