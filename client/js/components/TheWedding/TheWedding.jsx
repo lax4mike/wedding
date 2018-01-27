@@ -79,9 +79,7 @@ export default class TheWedding extends React.Component {
 
     const { placeInfo } = this.state;
 
-    // TODO make sure the timezone is correct
-    const weddingDate = moment("2018-09-15 3pm -04", "YYYY-MM-DD ha Z");
-    // console.log(weddingDate);
+    const weddingDate = moment.parseZone("2018-09-15T15:00:00-04:00");
 
     return (
       <div className="wedding">
