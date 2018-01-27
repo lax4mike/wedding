@@ -9,7 +9,17 @@ const Home = (props) => {
     <div>
 
       <div className="wedding__names">
-        <h1>Sarah & Mike</h1>
+        <div className="container">
+          {/* <div className="save-the-date">
+            <div className="save-the-date__names">
+              <h1>Sarah & Mike</h1>
+            </div>
+            <div className="save-the-date__img1" />
+            <div className="save-the-date__img2" />
+            <div className="save-the-date__poo">some text</div>
+          </div> */}
+          <h1>Sarah & Mike</h1>
+        </div>
       </div>
 
       <Navigation />
@@ -40,7 +50,7 @@ const Home = (props) => {
           <h2>Accommodations</h2>
 
           <div className="img">
-            <div className="img__frame" style={{ height: 333 }}>
+            <div className="img__frame" style={{ height: 416 }}>
               <img src="img/white-mountain-hotel.jpg" alt="White Mountain Hotel" />
             </div>
           </div>

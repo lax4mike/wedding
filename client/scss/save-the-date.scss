@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+
+.save-the-date {
+  display: grid;
+  grid-gap: 10px;
+  background-color: white;
+  grid-template-columns: 4fr 6fr;
+  grid-template-rows: 2fr 2fr 3fr;
+
+  height: 600px;
+
+  border: 10px solid white;
+}
+
+.save-the-date__names {
+  @include rock();
+  
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+  }
+
+
+}
+
+.save-the-date__img1,
+.save-the-date__img2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.save-the-date__img1 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  background-image: url("../img/mike-sarah-hueco-2012.jpg");
+}
+
+.save-the-date__img2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: url("../img/mike-sarah-hueco2-2012.jpg");
+}
+
+.save-the-date__poo {
+  @include rock();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

@@ -76,6 +76,7 @@ export default class Navigation extends React.Component {
         el,
         id,
         rect,
+        percentVisible: getPercetageVisible(rect),
         title: titlizeId(id)
       };
     });
@@ -86,21 +87,10 @@ export default class Navigation extends React.Component {
 
     const sections = this.findSections();
 
-    const getPercetageVisible = (section) => {
-      const { top, bottom, height } = section.rect;
-
-      const hiddenBefore = Math.abs(Math.min(0, top));
-      const hiddenAfter = Math.max(0, bottom - window.innerHeight);
-
-      const percentage = Math.max(0, (height - hiddenBefore - hiddenAfter) / height);
-
-      return percentage;
-    };
-
     const activeSectionId = R.compose(
       R.path(["section", "id"]),
       R.reduce((active, section) => {
-        const percentage = getPercetageVisible(section);
+        const percentage = getPercetageVisible(section.rect);
 
         return (percentage > active.percentage)
           ? { percentage, section }
@@ -124,10 +114,13 @@ export default class Navigation extends React.Component {
         <div className="nav__container container js-nav-container" ref={el => this.container = el}>
           {sections.map((section, i) => {
             const classes = classNames("nav__item", {
-              "is-active": section.id === activeSectionId
+              "is-active": section.id === activeSectionId || section.percentVisible > 0.9
             });
             return (
-              <div key={section.id} className={classes} ref={this.registerLink(section.id)}>
+              <div key={section.id}
+                className={classes}
+                ref={this.registerLink(section.id)}
+              >
                 <NavLink exact to={`#${section.id}`} key={section.id}>
                   {section.title}
                 </NavLink>
@@ -140,6 +133,17 @@ export default class Navigation extends React.Component {
   }
 }
 
+
+function getPercetageVisible(sectionRect) {
+  const { top, bottom, height } = sectionRect;
+
+  const hiddenBefore = Math.abs(Math.min(0, top));
+  const hiddenAfter = Math.max(0, bottom - window.innerHeight);
+
+  const percentage = Math.max(0, (height - hiddenBefore - hiddenAfter) / height);
+
+  return percentage;
+}
 
 function titlizeId(id){
   return R.compose(

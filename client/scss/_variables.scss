@@ -8,3 +8,13 @@ $z-nav: 1;
 
 $grey: #888;
 $blue: #19416c;
+
+@mixin rock() {
+  color: white;
+  background-color: $blue;
+
+  @supports (background-blend-mode: multiply) {
+    background-image: url("../img/rock-texture.jpg");
+    background-blend-mode: multiply;
+  }
+}

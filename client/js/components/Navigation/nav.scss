@@ -37,6 +37,9 @@ nav {
 
   .nav__item {
 
+    padding-left: 3px;
+    padding-right: 3px;
+
     &:first-child {
       margin-left: auto;
     }
@@ -48,13 +51,23 @@ nav {
     a {
       padding: 6px 12px;
       color: #444;
+      font-size: 18px;
       text-decoration: none;
       white-space: nowrap;
+
+      border-radius: 4px;
+
+      @media (max-width: 500px) {
+        font-size: 16px;
+      }
     }
 
-    &:hover a,
-    &.is-active a {
+    &:hover a {
       text-decoration: underline;
+    }
+
+    &.is-active a {
+      background-color: rgba(#eee, 1);
     }
   }
 
