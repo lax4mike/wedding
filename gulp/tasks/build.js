@@ -16,6 +16,7 @@ module.exports = function buildTask(projectRoot) {
     createCopyTask("build-copy", {
       src: [
         `${clientDir}/index.html`,
+        `${clientDir}/favicon.ico`,
         `${clientDir}/img/**`
       ],
       dest: buildDir,
