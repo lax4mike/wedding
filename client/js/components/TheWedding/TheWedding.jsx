@@ -4,10 +4,9 @@ import moment from "moment";
 
 import RightArrow from "../Svg/RightArrow.jsx";
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyAGpHR4gvWgMUxu3kLKFIq2_izh2AhXeuo";
-
 // https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder
 const WHITE_MOUNTAIN_HOTEL_PLACE_ID = "ChIJJXxDY1mgs0wRz_hXdQjasWU";
+const GOOGLE_MAPS_API_KEY = "AIzaSyAGpHR4gvWgMUxu3kLKFIq2_izh2AhXeuo";
 
 export default class TheWedding extends React.Component {
 

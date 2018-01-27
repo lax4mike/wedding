@@ -2,20 +2,10 @@ import React from "react";
 import R from "ramda";
 import classNames from "classnames";
 import throttle from "lodash.throttle";
-import debounce from "lodash.debounce";
-
 
 import { NavLink } from "react-router-dom";
 
-import { getDocumentHeight, getScrollTop, measureNavContainerOffset } from "../../scrollHelpers.js";
-
-import { object } from "prop-types";
-
 export default class Navigation extends React.Component {
-
-  static propTypes = {
-    location: object
-  };
 
   state = {
     activeSectionId: "",
@@ -29,7 +19,10 @@ export default class Navigation extends React.Component {
   componentDidMount = () => {
     document.addEventListener("scroll", this.handleScroll);
 
-    this.handleScroll();
+    // initialize the sections
+    this.setState({
+      sections: this.findSections()
+    });
   }
 
   componentWillUnmount = () => {
@@ -54,6 +47,7 @@ export default class Navigation extends React.Component {
   updateHash = (id) => {
     const hash = id ? "#" + id : "";
     const newLocation = window.location.pathname + window.location.search + hash;
+
     history.replaceState(null, null, newLocation);
   }
 
@@ -103,8 +97,6 @@ export default class Navigation extends React.Component {
       return percentage;
     };
 
-
-
     const activeSectionId = R.compose(
       R.path(["section", "id"]),
       R.reduce((active, section) => {
@@ -125,7 +117,6 @@ export default class Navigation extends React.Component {
 
   render = () => {
 
-    const {  } = this.props;
     const { activeSectionId, sections } = this.state;
 
     return (

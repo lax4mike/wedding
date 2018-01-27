@@ -16,8 +16,9 @@ const Home = (props) => {
 
       <div className="hero">
         <div className="img">
-          <div className="img__frame">
-            <img src="img/mike-sarah-hueco-2012.jpg" alt="Mike and Sarah at Hueco Tanks in 2012" height="450" width="600"/>
+          {/* height so the page doesn't jump when the image is loaded */}
+          <div className="img__frame" style={{ height: 450 }}>
+            <img src="img/mike-sarah-hueco-2012.jpg" alt="Mike and Sarah at Hueco Tanks in 2012" />
           </div>
         </div>
       </div>
@@ -39,8 +40,8 @@ const Home = (props) => {
           <h2>Accommodations</h2>
 
           <div className="img">
-            <div className="img__frame">
-              <img src="img/white-mountain-hotel.jpg" alt="White Mountain Hotel" width="400" height="333"/>
+            <div className="img__frame" style={{ height: 333 }}>
+              <img src="img/white-mountain-hotel.jpg" alt="White Mountain Hotel" />
             </div>
           </div>
 

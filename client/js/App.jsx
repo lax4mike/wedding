@@ -6,14 +6,25 @@ import { getOffsetTop, scrollTo, measureNavContainerOffset } from "./scrollHelpe
 
 import Home from "./pages/Home.jsx";
 
+import { shape, string } from "prop-types";
+
 class App extends React.Component {
 
+  static propTypes = {
+    location: shape({
+      hash: string
+    })
+  }
+
+  componentWillMount = () => {
+    // remove the hash so the browser doesn't auto jump
+    // we will get the hash from this.props.location.hash
+    history.replaceState(null, null, ".");
+  }
 
   componentDidMount = () => {
-    // make sure the page is rendered fully
-    window.requestAnimationFrame(() => {
-      this.handleRouteChange();
-    });
+    // immediately scroll to any hash that's in the url
+    this.handleRouteChange();
   }
 
   componentDidUpdate = (prevProps) => {
@@ -21,6 +32,7 @@ class App extends React.Component {
   }
 
   handleRouteChange = () => {
+
     const hash = R.path(["location", "hash"], this.props);
 
     // if there is a hash in the url, scroll to it

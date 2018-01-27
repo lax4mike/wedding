@@ -1,9 +1,10 @@
-$alegreyaSC: "Alegreya SC", sans-serif;
-$alegreya: "Alegreya", sans-serif;
+// Georgia is about the same size as Alegreya, so FOUT is reduced
+$alegreyaSC: "Alegreya SC", Georgia, sans-serif;
+$alegreya: "Alegreya", Georgia, sans-serif;
 
 $site-width: 800px;
 
 $z-nav: 1;
 
 $grey: #888;
-$blue: #19416C;
+$blue: #19416c;
