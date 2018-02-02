@@ -1,0 +1,37 @@
+@import "../../../scss/_variables.scss";
+
+.img {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.img__caption {
+  padding-top: 12px;
+}
+
+.img__holder {
+  box-sizing: border-box;
+}
+
+.img__frame {
+  display: inline-block;
+  border: 1px solid $grey;
+  padding: 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // justify-content: center;
+
+  img {
+    display: block; // removes whitespace
+    max-width: 100%;
+    flex: none;
+  }
+
+  @media (max-width: 700px) {
+    border-color: transparent;
+  }
+}

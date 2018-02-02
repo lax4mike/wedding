@@ -23,8 +23,8 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    // immediately scroll to any hash that's in the url
-    this.handleRouteChange();
+    // defer the scroll to any hash that's in the url
+    window.requestAnimationFrame(this.handleRouteChange);
   }
 
   componentDidUpdate = (prevProps) => {

@@ -99,7 +99,7 @@ export default class Navigation extends React.Component {
     )(sections);
 
     this.setState({ activeSectionId, sections });
-  }, 250)
+  }, 250, { leading: false, trailing: true })
 
   registerLink = id => el => {
     this.links[id] = el;

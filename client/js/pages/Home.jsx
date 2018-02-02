@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation/Navigation.jsx";
 import TheWedding from "../components/TheWedding/TheWedding.jsx";
 import RightArrow from "../components/Svg/RightArrow.jsx";
+import Img from "../components/Img/Img.jsx";
 
 const Home = (props) => {
 
@@ -25,12 +26,12 @@ const Home = (props) => {
       <Navigation />
 
       <div className="hero">
-        <div className="img">
-          {/* height so the page doesn't jump when the image is loaded */}
-          <div className="img__frame" style={{ height: 450 }}>
-            <img src="img/mike-sarah-hueco-2012.jpg" alt="Mike and Sarah at Hueco Tanks in 2012" />
-          </div>
-        </div>
+        <Img
+          src="img/mike-sarah-hueco-2012.jpg"
+          alt="Mike and Sarah at Hueco Tanks in 2012"
+          naturalWidth={600}
+          naturalHeight={450}
+        />
       </div>
 
 
@@ -49,11 +50,6 @@ const Home = (props) => {
         <div className="container">
           <h2>Accommodations</h2>
 
-          <div className="img">
-            <div className="img__frame" style={{ height: 416 }}>
-              <img src="img/white-mountain-hotel.jpg" alt="White Mountain Hotel" />
-            </div>
-          </div>
 
 
           <div className="h3-section">
@@ -63,9 +59,15 @@ const Home = (props) => {
               We have reserved a room block at the White Mountain Hotel, which will be released August 15. During peak season, the hotel requires a two night minimum stay.  Active military, AAA, and <span className="highlight">?</span> discounts are offered.  Breakfast is also included in the nightly rate.
             </p>
 
+            <Img src="img/white-mountain-hotel.jpg"
+              alt="White Mountain Hotel"
+              naturalWidth={500}
+              naturalHeight={416}
+              caption="White mountain hotel at the base of Whitehorse Ledges"
+            />
 
             <div className="btn__holder">
-              <a className="btn" target="_blank" rel="noopener noreferrer" href="http://www.whitemountainhotel.com">View website <RightArrow /></a>
+              <a className="btn" target="_blank" rel="noopener noreferrer" href="http://www.whitemountainhotel.com">White Mountain Hotel website <RightArrow /></a>
             </div>
           </div>
 
