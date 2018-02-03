@@ -3,6 +3,8 @@ import R from "ramda";
 import { node, number, string } from "prop-types";
 
 
+const PADDING = 32;
+
 export default class Img extends React.Component {
 
   static propTypes = {
@@ -31,9 +33,7 @@ export default class Img extends React.Component {
 
     const ratio = naturalHeight / naturalWidth;
 
-console.log("calculateDimensions", this.el.offsetWidth, ratio);
-
-    const width = Math.min(this.el.offsetWidth, naturalWidth);
+    const width = Math.min(this.el.offsetWidth - PADDING, naturalWidth);
     const height = width * ratio;
 
     this.setState({ width, height });
@@ -49,8 +49,8 @@ console.log("calculateDimensions", this.el.offsetWidth, ratio);
 
     return (
       <div className="img" ref={el => this.el = el}>
-        <div className="img__frame" style={{ height, width }}>
-          <div className="img__holder">
+        <div className="img__frame">
+          <div className="img__holder" style={{ height, width }}>
             <img {...otherProps} />
           </div>
           {caption && (

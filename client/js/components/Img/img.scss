@@ -14,16 +14,15 @@
 }
 
 .img__frame {
-  display: inline-block;
+  display: inline-flex;
   border: 1px solid $grey;
   padding: 12px;
   max-width: 100%;
   box-sizing: border-box;
 
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
-  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   img {
     display: block; // removes whitespace

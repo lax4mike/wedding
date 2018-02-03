@@ -31,6 +31,7 @@ const Home = (props) => {
           alt="Mike and Sarah at Hueco Tanks in 2012"
           naturalWidth={600}
           naturalHeight={450}
+          caption="Mike and Sarah at Hueco Tanks in 2012"
         />
       </div>
 
@@ -43,9 +44,6 @@ const Home = (props) => {
 
           <TheWedding />
 
-          <p>
-            The White Mountain Hotel is located in the heart of the Mt Washington Valley. The hotel is surrounded by Echo Lake State Park and sits at the foot of White Horse Ledge with views of Cathedral Ledge and the surrounding mountains.  Weather permitting, our ceremony will be on the lawn, and the cocktail hour and reception will be held under a tent on hotel grounds.
-          </p>
         </div>
       </section>
 

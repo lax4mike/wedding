@@ -84,14 +84,17 @@ export default class TheWedding extends React.Component {
     return (
       <div className="wedding">
         <div className="wedding__info">
+
           <h3>Ceremony and Reception</h3>
+
           <div className="wedding__date">
-            Saturday, September 15, 2018
-            <div className="wedding__from-now">
-              ({weddingDate.fromNow()})
+            <div>
+              Saturday, September 15, 2018
+              <div className="wedding__from-now">
+                ({weddingDate.fromNow()})
+              </div>
             </div>
           </div>
-
 
           <div className="wedding__hotel">
             <div>
@@ -99,16 +102,17 @@ export default class TheWedding extends React.Component {
               <br/>
               North Conway, NH
             </div>
-
           </div>
-        </div>
 
+          <p>
+            The White Mountain Hotel is located in the heart of the Mt. Washington Valley. The hotel is surrounded by Echo Lake State Park and sits at the foot of White Horse Ledge with views of Cathedral Ledge and the surrounding mountains.  Weather permitting, our ceremony will be on the lawn, and the cocktail hour and reception will be held under a tent on hotel grounds.
+          </p>
+        </div>
 
         <div className="wedding__map">
-          <div className="map"
-            ref={el => this.map = el}
-          />
+          <div className="map" ref={el => this.map = el} />
         </div>
+
         <div className="wedding__map-link">
           <a href={R.prop("url", placeInfo)}
             className="btn btn--external"

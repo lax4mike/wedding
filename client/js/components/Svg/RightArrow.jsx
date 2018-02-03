@@ -12,8 +12,8 @@ const propTypes = {
 const RightArrow = (props) => {
 
   const {
-    width = 19,
-    height = 16,
+    width = 16,
+    height = 12,
     className,
     ...rest
   } = props;
