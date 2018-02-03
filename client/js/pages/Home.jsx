@@ -78,7 +78,7 @@ const Home = (props) => {
               There are many other lodging options in North Conway and nearby towns, such as Intervale, Bartlett, Conway, and Jackson.  There are several chain hotels like the Holiday Inn Express, Residence Inn, and Comfort Inn located in the southern end of North Conway. There are smaller family motels scattered throughout along with bed and breakfasts. We have personally stayed at the White Trellis Motel and the Swiss Chalets Village Inn, which are less expensive local motels. <a target="_blank" rel="noopener noreferrer" href="https://www.airbnb.com">Airbnb</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.vrbo.com">VRBO</a> are also great options for renting condos or houses that can accomodate multiple people.
             </p>
             <p>
-              The <a target="_blank" href="http://mtwashingtonvalley.org/visit/where-to-stay.cfm">Mt. Washington Valley Chamber of Commerce</a> website has a searchable list of lodging options.
+              The <a target="_blank" rel="noopener noreferrer" href="http://mtwashingtonvalley.org/visit/where-to-stay.cfm">Mt. Washington Valley Chamber of Commerce</a> website has a searchable list of lodging options.
             </p>
             <p>
               September is prime tourist season in New England, so many places will start filling quickly.  Book something soon!
@@ -91,7 +91,13 @@ const Home = (props) => {
         <div className="container">
           <h2>Getting Here</h2>
           <p>
-              Three major airports service the North Conway/Mt. Washington Valley area: Logan Airport, Boston, MA (2:45 hours); Boston/Manchester Airport, Manchester, NH (2 hours);  and Portland International Jetport, Portland, ME (1:30 hours). Logan is the largest of the three airports. You will need a car to complete the trip to North Conway. Let us know if you are looking for a travel buddy, and we can put guests in touch with each other.
+            Three major airports service the North Conway/Mt. Washington Valley area:
+            <ul>
+              <li>Logan Airport, <strong>Boston, MA</strong> (2:45 hours from North Conway). This is the largest of the three airports.</li>
+              <li>Boston/Manchester Airport, <strong>Manchester, NH</strong> (2 hours).</li>
+              <li>Portland International Jetport, <strong>Portland, ME</strong> (1:30 hours).</li>
+            </ul>
+             You will need a car to complete the trip to North Conway. Let us know if you are looking for a travel buddy, and we can put guests in touch with each other.
           </p>
         </div>
       </section>
