@@ -84,12 +84,14 @@ export default class TheWedding extends React.Component {
     return (
       <div className="wedding">
         <div className="wedding__info">
+          <h3>Ceremony and Reception</h3>
           <div className="wedding__date">
-            September 15, 2018
+            Saturday, September 15, 2018
             <div className="wedding__from-now">
               ({weddingDate.fromNow()})
             </div>
           </div>
+
 
           <div className="wedding__hotel">
             <div>
