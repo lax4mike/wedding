@@ -54,7 +54,10 @@ const Home = (props) => {
           <div className="h3-section">
             <h3>White Mountain Hotel</h3>
             <p>
-              We have reserved a room block at the White Mountain Hotel, which will be released August 15. During peak season, the hotel requires a two night minimum stay.  Active military, AAA, and AARP discounts are offered. A full breakfast is included in the nightly rate.
+              We have reserved a room block at the White Mountain Hotel, which will be held until August 15. Call the reservation line at 800-533-6301 and mention our names when you reserve.
+            </p>
+            <p>
+              The hotel requires a two night minimum stay.   Active military, AAA, and AARP discounts are offered. A full breakfast is included in the nightly rate.
             </p>
 
             <div className="btn__holder">
@@ -72,7 +75,10 @@ const Home = (props) => {
           <div className="h3-section">
             <h3>Other Lodging</h3>
             <p>
-              There are many other lodging options in North Conway and nearby towns, such as Intervale, Bartlett, Conway, and Jackson.  There are several chain hotels like the Holiday Inn Express, Residence Inn, and Comfort Inn located in the southern end of North Conway. There are smaller family motels scattered throughout along with bed and breakfasts. We have personally stayed at the White Trellis Motel and the Swiss Chalets Village Inn. <a target="_blank" rel="noopener noreferrer" href="https://www.airbnb.com">Airbnb</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.vrbo.com">VRBO</a> are also great options for renting condos or houses that can accomodate multiple people.
+              There are many other lodging options in North Conway and nearby towns, such as Intervale, Bartlett, Conway, and Jackson.  There are several chain hotels like the Holiday Inn Express, Residence Inn, and Comfort Inn located in the southern end of North Conway. There are smaller family motels scattered throughout along with bed and breakfasts. We have personally stayed at the White Trellis Motel and the Swiss Chalets Village Inn, which are less expensive local motels. <a target="_blank" rel="noopener noreferrer" href="https://www.airbnb.com">Airbnb</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.vrbo.com">VRBO</a> are also great options for renting condos or houses that can accomodate multiple people.
+            </p>
+            <p>
+              The <a target="_blank" href="http://mtwashingtonvalley.org/visit/where-to-stay.cfm">Mt. Washington Valley Chamber of Commerce</a> website has a searchable list of lodging options.
             </p>
             <p>
               September is prime tourist season in New England, so many places will start filling quickly.  Book something soon!
