@@ -94,7 +94,9 @@ const Home = (props) => {
         <div className="container contact">
           <h2>Contact</h2>
           <div>
-            If you have any questions, don’t hesitate to contact us at <a href="mailto:sewelch@gmail.com">sewelch@gmail.com</a>
+            If you have any questions, don’t hesitate to contact us at
+            <br/>
+            <a href="mailto:contact@sarahandmikewedding.com">contact@sarahandmikewedding.com</a>
           </div>
         </div>
       </section>
