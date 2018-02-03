@@ -18,7 +18,9 @@ module.exports = function cssTask(taskName, userConfig) {
   const cssConfig = R.merge({
 
     sass: {
-      outputStyle: env.production() ? "compressed" : "expanded"
+      // compressed isn't playing nicely with autoprefixer
+      // outputStyle: env.production() ? "compressed" : "expanded"
+      outputStyle: env.production() ? "compact" : "expanded"
     },
 
     autoprefixer: {
