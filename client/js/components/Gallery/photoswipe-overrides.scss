@@ -1,0 +1,34 @@
+#gallery { // sass-lint:disable-line no-ids
+
+  .pswp-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .pswp-thumbnail {
+    margin: 5px;
+
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+  }
+
+  .pswp__top-bar {
+    background-color: transparent;
+  }
+
+  .pswp__caption__center { // sass-lint:disable-line bem-depth
+    font-family: "verdana", sans-serif;
+    font-size: 12px;
+    text-align: center;
+  }
+}

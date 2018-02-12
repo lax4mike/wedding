@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation/Navigation.jsx";
 import TheWedding from "../components/TheWedding/TheWedding.jsx";
 import RightArrow from "../components/Svg/RightArrow.jsx";
 import Img from "../components/Img/Img.jsx";
+import Gallery from "../components/Gallery/Gallery.jsx";
 
 const Home = (props) => {
 
@@ -87,16 +88,18 @@ const Home = (props) => {
         </div>
       </section>
 
-      <section id="getting-here">
+      <section id="getting-here" className="getting-here">
         <div className="container">
           <h2>Getting Here</h2>
           <p>
             Three major airports service the North Conway/Mt. Washington Valley area:
-            <ul>
-              <li>Logan Airport, <strong>Boston, MA</strong> (2:45 hours from North Conway). This is the largest of the three airports.</li>
-              <li>Boston/Manchester Airport, <strong>Manchester, NH</strong> (2 hours).</li>
-              <li>Portland International Jetport, <strong>Portland, ME</strong> (1:30 hours).</li>
-            </ul>
+          </p>
+          <ul>
+            <li>Logan Airport, <strong>Boston, MA</strong> (2:45 hours from North Conway). This is the largest of the three airports.</li>
+            <li>Boston/Manchester Airport, <strong>Manchester, NH</strong> (2 hours).</li>
+            <li>Portland International Jetport, <strong>Portland, ME</strong> (1:30 hours).</li>
+          </ul>
+          <p>
              You will need a car to complete the trip to North Conway. Let us know if you are looking for a travel buddy, and we can put guests in touch with each other.
           </p>
         </div>
@@ -106,12 +109,19 @@ const Home = (props) => {
         <div className="container contact">
           <h2>Contact</h2>
           <div>
-            If you have any questions, don’t hesitate to contact us at
+            If you have any questions, don’t hesitate to email us at
             <br/>
             <a href="mailto:contact@sarahandmikewedding.com">contact@sarahandmikewedding.com</a>
           </div>
         </div>
       </section>
+
+      <section id="gallery">
+        <div className="container">
+          <Gallery />
+        </div>
+      </section>
+
     </div>
   );
 };
