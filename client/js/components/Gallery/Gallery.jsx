@@ -66,6 +66,13 @@ const photos = [
     title: "Skiing in Bretton woods, NH."
   },
   {
+    src: "img/gallery/large/sunset.jpg",
+    thumbnail: "img/gallery/thumb/sunset.jpg",
+    w: 1200,
+    h: 900,
+    title: "Cape cod"
+  },
+  {
     src: "img/gallery/large/whistler.jpg",
     thumbnail: "img/gallery/thumb/whistler.jpg",
     w: 1200,
@@ -82,41 +89,8 @@ const options = {
   fullscreenEl: false,
   zoomEl: false,
   shareEl: false,
-  counterEl: false,
+  counterEl: false
   // showHideOpacity: true,
-
-  getThumbBoundsFn: function(index, a) {
-
-    const THUMB_SIZE = 180;
-
-    // find thumbnail element
-    const thumbnail = document.querySelectorAll(".pswp-thumbnail")[index];
-    const { w, h } = photos[index];
-    const ratio = w/h;
-    const isPortrait = ratio < 1;
-
-    // get window scroll Y
-    const pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
-    // optionally get horizontal scroll
-
-    // get position of element relative to viewport
-    const rect = thumbnail.getBoundingClientRect();
-
-    const left = rect.left;
-    const top = rect.top + pageYScroll;
-    const { width, height } = rect; // width should always be THUMB_SIZE
-
-    const thumbHeight = (isPortrait) ? width / ratio : THUMB_SIZE;
-    const thumbWidth = (isPortrait) ? THUMB_SIZE : height * ratio;
-
-    return {
-      x: (isPortrait) ? left : left - ((thumbWidth - THUMB_SIZE) / 2),
-      y: (isPortrait) ? top - ((thumbHeight - THUMB_SIZE) / 2) : top,
-      w: thumbWidth
-    };
-
-  }
-
 };
 
 

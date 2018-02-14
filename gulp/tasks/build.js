@@ -71,9 +71,7 @@ module.exports = function buildTask(projectRoot) {
       // https://github.com/scalableminds/gulp-image-resize
       resize: {
         width: 180,
-        height: 180,
-        crop: true,
-        gravity: "Center"
+        height: 180
       }
     });
 
@@ -84,8 +82,7 @@ module.exports = function buildTask(projectRoot) {
       // https://github.com/scalableminds/gulp-image-resize
       resize: {
         width: 1200,
-        height: 1200,
-        crop: false
+        height: 1200
       }
     });
 
