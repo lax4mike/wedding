@@ -11,7 +11,6 @@ const path   = require("path");
 const projectRoot = path.resolve(__dirname, "..");
 
 const buildTask = require("./tasks/build.js")(projectRoot);
-const auditTask = require("./tasks/audit.js")(projectRoot);
 
 /**
  * gulp build
@@ -21,13 +20,6 @@ const auditTask = require("./tasks/audit.js")(projectRoot);
  */
 gulp.task("build", buildTask);
 
-
-/**
- * gulp audit
- *
- * Gather performance and accessibility metrics
- */
-gulp.task("audit", auditTask);
 
 
 /* gulp */

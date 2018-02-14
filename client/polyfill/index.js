@@ -4,6 +4,14 @@
 import "core-js/es6/map.js";
 import "core-js/es6/set.js";
 
+import smoothScrollPolyfill from "smoothscroll-polyfill";
+
+const isSmoothScrollSupported = "scrollBehavior" in document.documentElement.style;
+
+if (!isSmoothScrollSupported){
+  smoothScrollPolyfill.polyfill();
+}
+
 
 // window.fetch and window.Promise
 import "whatwg-fetch";
