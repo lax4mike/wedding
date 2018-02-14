@@ -2,8 +2,9 @@ const runSequence = require("run-sequence");
 
 const quench = require("../quench/quench.js");
 const createCopyTask = require("../quench/createCopyTask.js");
-const createJsTask   = require("../quench/createJsTask.js");
-const createCssTask   = require("../quench/createCssTask.js");
+const createJsTask = require("../quench/createJsTask.js");
+const createCssTask = require("../quench/createCssTask.js");
+const createImageResizeTask = require("../quench/createImageResizeTask.js");
 const createBrowserSyncTask = require("../quench/createBrowserSyncTask.js");
 
 module.exports = function buildTask(projectRoot) {
@@ -13,6 +14,7 @@ module.exports = function buildTask(projectRoot) {
 
   return function(){
 
+    /* copy */
     createCopyTask("build-copy", {
       src: [
         `${clientDir}/index.html`,
@@ -23,7 +25,7 @@ module.exports = function buildTask(projectRoot) {
       base: `${clientDir}`
     });
 
-
+    /* js */
     createJsTask("build-js", {
       dest: `${buildDir}/js/`,
       files: [
@@ -47,6 +49,7 @@ module.exports = function buildTask(projectRoot) {
       ]
     });
 
+    /* css */
     createCssTask("build-css", {
       src: [
         `${clientDir}/scss/**/*.scss`,
@@ -61,12 +64,44 @@ module.exports = function buildTask(projectRoot) {
     });
 
 
+    /* thumbnails */
+    createImageResizeTask("build-thumbnails", {
+      src: `${clientDir}/img-gallery/**`,
+      dest: `${buildDir}/img/gallery/thumb`,
+      // https://github.com/scalableminds/gulp-image-resize
+      resize: {
+        width: 180,
+        height: 180,
+        crop: true,
+        gravity: "Center"
+      }
+    });
+
+    /* gallery images */
+    createImageResizeTask("build-gallery", {
+      src: `${clientDir}/img-gallery/**`,
+      dest: `${buildDir}/img/gallery/large`,
+      // https://github.com/scalableminds/gulp-image-resize
+      resize: {
+        width: 1200,
+        height: 1200,
+        crop: false
+      }
+    });
+
+    /* browser-syc */
     createBrowserSyncTask("build-browser-sync", {
       server: buildDir
     });
 
 
-    const buildTasks = ["build-js", "build-css", "build-copy"];
+    const buildTasks = [
+      "build-js",
+      "build-css",
+      "build-copy",
+      "build-thumbnails",
+      "build-gallery"
+    ];
 
     if (quench.isWatching()){
       return runSequence(buildTasks, "build-browser-sync");
