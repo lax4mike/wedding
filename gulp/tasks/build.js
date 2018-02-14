@@ -70,8 +70,7 @@ module.exports = function buildTask(projectRoot) {
       dest: `${buildDir}/img/gallery/thumb`,
       // https://github.com/scalableminds/gulp-image-resize
       resize: {
-        width: 180,
-        height: 180
+        width: 320
       }
     });
 

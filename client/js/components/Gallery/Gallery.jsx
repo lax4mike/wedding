@@ -3,13 +3,6 @@ import { PhotoSwipeGallery } from "react-photoswipe";
 
 const photos = [
   {
-    src: "img/gallery/large/antelope.jpg",
-    thumbnail: "img/gallery/thumb/antelope.jpg",
-    w: 676,
-    h: 1200,
-    title: "Antelope Canyon, AZ"
-  },
-  {
     src: "img/gallery/large/cadilac.jpg",
     thumbnail: "img/gallery/thumb/cadilac.jpg",
     w: 1200,
@@ -17,11 +10,11 @@ const photos = [
     title: "Top of Cadilac Mt. for sunrise."
   },
   {
-    src: "img/gallery/large/florence.jpg",
-    thumbnail: "img/gallery/thumb/florence.jpg",
+    src: "img/gallery/large/antelope.jpg",
+    thumbnail: "img/gallery/thumb/antelope.jpg",
     w: 676,
     h: 1200,
-    title: "Florence, Italy"
+    title: "Antelope Canyon, AZ"
   },
   {
     src: "img/gallery/large/garfield.jpg",
@@ -50,6 +43,13 @@ const photos = [
     w: 1200,
     h: 900,
     title: "Summit of Mt. Katahdin."
+  },
+  {
+    src: "img/gallery/large/florence.jpg",
+    thumbnail: "img/gallery/thumb/florence.jpg",
+    w: 676,
+    h: 1200,
+    title: "Florence, Italy"
   },
   {
     src: "img/gallery/large/sassolungo.jpg",
@@ -99,9 +99,11 @@ export default class Gallery extends React.Component {
 
   getThumbnailContent = (item) => {
 
-    const dimensions = (item.w > item.h)
-      ? { width: "100%", height: "auto" }
-      : { width: "auto", height: "100%" };
+    // const dimensions = (item.w > item.h)
+    //   ? { width: "100%", height: "auto" }
+    //   : { width: "auto", height: "100%" };
+
+    const dimensions = { width: "100%", height: "auto" };
 
     return (
       <img src={item.thumbnail} alt={item.title} {...dimensions} />

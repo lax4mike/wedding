@@ -1,22 +1,25 @@
 #gallery { // sass-lint:disable-line no-ids
 
   .pswp-thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+    column-count: 4;
+    column-gap: 0;
+
+    @media (max-width: 788px) {
+      column-count: 3;
+    }
+
+    @media (max-width: 580px) {
+      column-count: 2;
+    }
+
   }
 
 
   .pswp-thumbnail {
-    margin: 5px;
 
-    width: 180px;
-    height: 180px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    break-inside: avoid; // for column-count
+    padding: 5px;
 
     cursor: pointer;
 
