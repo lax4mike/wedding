@@ -1,3 +1,4 @@
+import "core-js/fn/array/from.js"; // needed for IE in some library (react?)
 
 // for react 16
 // https://facebook.github.io/react/blog/2017/09/26/react-v16.0.html#javascript-environment-requirements
