@@ -105,6 +105,14 @@ const Home = (props) => {
         </div>
       </section>
 
+      <section id="our-story">
+        <h2>Our story</h2>
+        <p>Sarah and Mike met at the climbing gym in 2009.  They&apos;ve been going on outdoor adventures together evern since. </p>
+        <div className="container gallery">
+          <Gallery />
+        </div>
+      </section>
+
       <section id="contact">
         <div className="container contact">
           <h2>Contact</h2>
@@ -113,12 +121,6 @@ const Home = (props) => {
             <br/>
             <a href="mailto:contact@sarahandmikewedding.com">contact@sarahandmikewedding.com</a>
           </div>
-        </div>
-      </section>
-
-      <section id="gallery">
-        <div className="container">
-          <Gallery />
         </div>
       </section>
 
