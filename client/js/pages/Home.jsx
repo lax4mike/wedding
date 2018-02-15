@@ -105,12 +105,12 @@ const Home = (props) => {
         </div>
       </section>
 
-      <section id="our-story">
-        <h2>Our story</h2>
-        <p>Sarah and Mike met at the climbing gym in 2009.  They&apos;ve been going on outdoor adventures together evern since. </p>
-        <div className="container gallery">
-          <Gallery />
+      <section id="our-adventures">
+        <div className="container">
+          <h2>Our adventures</h2>
+          <p>Sarah and Mike met at the climbing gym in 2009.  They&apos;ve been going on outdoor adventures together ever since. </p>
         </div>
+        <Gallery />
       </section>
 
       <section id="contact">

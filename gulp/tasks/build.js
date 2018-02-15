@@ -68,6 +68,7 @@ module.exports = function buildTask(projectRoot) {
     createImageResizeTask("build-thumbnails", {
       src: `${clientDir}/img-gallery/**`,
       dest: `${buildDir}/img/gallery/thumb`,
+      base: `${clientDir}/img-gallery/`,
       // https://github.com/scalableminds/gulp-image-resize
       resize: {
         width: 320
@@ -78,6 +79,8 @@ module.exports = function buildTask(projectRoot) {
     createImageResizeTask("build-gallery", {
       src: `${clientDir}/img-gallery/**`,
       dest: `${buildDir}/img/gallery/large`,
+      base: `${clientDir}/img-gallery/`,
+      rename: true,
       // https://github.com/scalableminds/gulp-image-resize
       resize: {
         width: 1200,
