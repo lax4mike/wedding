@@ -12,7 +12,6 @@ nav {
   box-sizing: border-box;
   z-index: $z-nav;
   border-bottom: 1px solid $grey;
-
 }
 
 
@@ -21,6 +20,7 @@ nav {
   box-sizing: border-box;
   overflow-x: auto;
   max-width: 100%;
+
 
   // justify-content: center; this messes up the overflow-x;
   // using margins on nav__item:first/last-child instead
@@ -34,41 +34,45 @@ nav {
   &::-webkit-scrollbar {
     display: none;
   }
+}
 
-  .nav__item {
+.nav__item {
 
-    padding-left: 3px;
-    padding-right: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
 
-    &:first-child {
-      margin-left: auto;
-    }
-
-    &:last-child {
-      margin-right: auto;
-    }
-
-    a {
-      padding: 6px 12px;
-      color: #444;
-      font-size: 18px;
-      text-decoration: none;
-      white-space: nowrap;
-
-      border-radius: 4px;
-
-      @media (max-width: 500px) {
-        font-size: 16px;
-      }
-    }
-
-    &:hover a {
-      text-decoration: underline;
-    }
-
-    &.is-active a {
-      background-color: rgba(#eee, 1);
-    }
+  &:first-child {
+    margin-left: auto;
   }
 
+  &:last-child {
+    margin-right: auto;
+  }
+
+  &.is-active .nav__link {
+    background-color: rgba(#eee, 1);
+  }
+
+  // this breakpoint is here instead of in .nav__link
+  // so it doesn't apply to mobile-nav
+  @media (max-width: 500px) {
+    .nav__link {
+      font-size: 16px;
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 6px 12px;
+  color: #444;
+  font-size: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  border-radius: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

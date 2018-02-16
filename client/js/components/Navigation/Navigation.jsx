@@ -2,6 +2,7 @@ import React from "react";
 import R from "ramda";
 import classNames from "classnames";
 import throttle from "lodash.throttle";
+import MobileNav from "./MobileNav.jsx";
 
 import { NavLink } from "react-router-dom";
 
@@ -109,8 +110,8 @@ export default class Navigation extends React.Component {
 
     const { activeSectionId, sections } = this.state;
 
-    return (
-      <nav>
+    return ([
+      <nav key="main" >
         <div className="nav__container container js-nav-container" ref={el => this.container = el}>
           {sections.map((section, i) => {
             const classes = classNames("nav__item", {
@@ -121,15 +122,16 @@ export default class Navigation extends React.Component {
                 className={classes}
                 ref={this.registerLink(section.id)}
               >
-                <NavLink exact to={`#${section.id}`} key={section.id}>
+                <NavLink exact to={`#${section.id}`} key={section.id} className="nav__link">
                   {section.title}
                 </NavLink>
               </div>
             );
           })}
         </div>
-      </nav>
-    );
+      </nav>,
+      <MobileNav key="mobile" sections={sections} />
+    ]);
   }
 }
 
