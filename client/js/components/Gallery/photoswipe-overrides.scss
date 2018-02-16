@@ -1,7 +1,7 @@
 .gallery {
 
   padding: 5px;
-  width: 800px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -9,8 +9,16 @@
 
   .pswp-thumbnails {
     margin: auto;
-    column-count: 4;
+    column-count: 6;
     column-gap: 0;
+
+    @media (max-width: 1200px) {
+      column-count: 5;
+    }
+
+    @media (max-width: 1000px) {
+      column-count: 4;
+    }
 
     @media (max-width: 788px) {
       column-count: 3;
@@ -44,6 +52,7 @@
     font-family: "verdana", sans-serif;
     font-size: 12px;
     text-align: center;
+    max-width: none;
   }
 
   .pswp__counter {

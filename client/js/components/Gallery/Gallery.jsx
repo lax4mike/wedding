@@ -64,12 +64,12 @@ const photos = [
     title: "Florence, Italy 2014"
   },
   {
-    filename: "2014-herring-1200x435.jpg",
-    title: "Sailing on Herring Pond 2014"
-  },
-  {
     filename: "2014-sassolungo-1200x900.jpg",
     title: "Skiing in the Dolomites, Italy with Sassolungo in the background 2014"
+  },
+  {
+    filename: "2014-herring-1200x435.jpg",
+    title: "Sailing on Herring Pond 2014"
   },
   {
     filename: "2014-tortola-1200x900.jpg",
@@ -115,7 +115,7 @@ const photoswipeItems = R.map(
       R.match(/-(\d+)x(\d+)\.\w+$/)
     )(filename);
 
-    const thumb = R.replace(/-(\d+)x(\d+)/, "", filename);
+    const thumb = R.replace(/-(\d+)x(\d+)(?=\.)/, "", filename);
 
     return {
       src: `img/gallery/large/${filename}`,
@@ -130,7 +130,7 @@ const options = {
   history: false,
 
   // ui options
-  fullscreenEl: false,
+  fullscreenEl: true,
   zoomEl: false,
   shareEl: false,
   counterEl: true

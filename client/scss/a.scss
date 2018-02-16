@@ -1,0 +1,11 @@
+@import "./_variables.scss";
+
+
+a {
+  color: $blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

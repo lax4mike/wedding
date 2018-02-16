@@ -120,6 +120,9 @@ const Home = (props) => {
             If you have any questions, don’t hesitate to email us at
             <br/>
             <a href="mailto:contact@sarahandmikewedding.com">contact@sarahandmikewedding.com</a>
+            <br/>
+            <br/>
+            or give Mike a call at (602) 451-0571
           </div>
         </div>
       </section>
