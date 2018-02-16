@@ -84,6 +84,10 @@ const photos = [
     title: "Antelope Canyon, AZ on a Southwest road trip 2016"
   },
   {
+    filename: "2016-canyoneering-1200x900.jpg",
+    title: "Canyoneering in Utah 2016"
+  },
+  {
     filename: "2016-garfield-1200x675.jpg",
     title: "Hiking Mt. Garfield, NH 2016"
   },
@@ -102,6 +106,10 @@ const photos = [
   {
     filename: "2016-terns-tail-1200x676.jpg",
     title: "Sailing the Tern's tail on Cape Cod bay 2016"
+  },
+  {
+    filename: "2017-haleakla-1200x900.jpg",
+    title: "Hiking Haleakalā Volcano in Maui, HI 2017"
   }
 ];
 
