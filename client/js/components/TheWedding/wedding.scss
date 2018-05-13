@@ -11,8 +11,21 @@
 
   background-color: $blue;
 
+  .container {
+    width: 500px;
+  }
+
   h1 {
     color: white;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    color: white;
+    font-family: $alegreya;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1em;
   }
 
   @supports (background-blend-mode: multiply) {

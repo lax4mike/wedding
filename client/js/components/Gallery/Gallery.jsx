@@ -52,8 +52,8 @@ const photos = [
     title: "Skiing in Whistler, BC 2012"
   },
   {
-    filename: "2013-cadilac-1200x900.jpg",
-    title: "Top of Cadilac Mt. in Acadia National Park for sunrise 2013"
+    filename: "2013-cadillac-1200x900.jpg",
+    title: "Top of Cadillac Mt. in Acadia National Park for sunrise 2013"
   },
   {
     filename: "2014-acadia-1200x264.jpg",
@@ -93,7 +93,7 @@ const photos = [
   },
   {
     filename: "2016-helicopter-1200x900.jpg",
-    title: "Helicopter ride to go back-country skiing in British Columbia 2016"
+    title: "Helicopter ride to go backcountry skiing in British Columbia 2016"
   },
   {
     filename: "2016-sol-1200x900.jpg",
@@ -108,7 +108,7 @@ const photos = [
     title: "Sailing the Tern's tail on Cape Cod bay 2016"
   },
   {
-    filename: "2017-haleakla-1200x900.jpg",
+    filename: "2017-haleakala-1200x900.jpg",
     title: "Hiking Haleakalā Volcano in Maui, HI 2017"
   }
 ];

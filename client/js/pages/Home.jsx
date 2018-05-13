@@ -21,6 +21,7 @@ const Home = (props) => {
             <div className="save-the-date__poo">some text</div>
           </div> */}
           <h1>Sarah & Mike</h1>
+          <h2>are getting married!</h2>
         </div>
       </div>
 
@@ -118,7 +119,7 @@ const Home = (props) => {
           <div className="container contact">
             <h2>Contact</h2>
             <div>
-              If you have any questions, don’t hesitate to email us at
+              <span>If you have any questions,</span> <span>don’t hesitate to email us at</span>
               <br/>
               <a href="mailto:contact@sarahandmikewedding.com">contact@sarahandmikewedding.com</a>
               <br/>
