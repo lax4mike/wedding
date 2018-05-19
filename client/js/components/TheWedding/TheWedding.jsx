@@ -105,7 +105,7 @@ export default class TheWedding extends React.Component {
           </div>
 
           <p>
-            The White Mountain Hotel is located in the heart of the Mt. Washington Valley. The hotel neighbors Echo Lake State Park and sits at the foot of White Horse Ledge with views of Cathedral Ledge and the surrounding mountains.  Weather permitting, our ceremony will be on the lawn, and the cocktail hour and reception will be held under a tent on the hotel grounds.
+            The White Mountain Hotel is located in the heart of the Mt. Washington Valley. The hotel neighbors Echo Lake State Park and sits at the foot of White Horse Ledge with views of Cathedral Ledge and the surrounding mountains.  Weather permitting, our ceremony will be on the lawn, and the cocktail hour and reception will be held under a tent on the hotel grounds. When choosing your footwear, please note that the tent will be set on the grass.
           </p>
         </div>
 
