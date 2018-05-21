@@ -25,7 +25,7 @@ const Home = (props) => {
         </div>
       </div>
 
-      <main>
+      <div className="main">
         <Navigation />
 
         <div className="hero">
@@ -172,7 +172,7 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 };

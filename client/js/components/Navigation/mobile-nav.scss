@@ -1,7 +1,8 @@
 @import "../../../scss/_variables.scss";
 
 
-main {
+// using .main instead of <main> for IE 11
+.main {
   position: relative;
 }
 
