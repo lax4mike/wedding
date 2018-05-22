@@ -71,7 +71,7 @@ const Home = (props) => {
                 alt="White Mountain Hotel"
                 naturalWidth={500}
                 naturalHeight={416}
-                caption="White mountain hotel at the base of Whitehorse Ledges"
+                caption="White Mountain Hotel at the base of Whitehorse Ledge"
               />
             </div>
 
@@ -104,6 +104,38 @@ const Home = (props) => {
             <p>
                You will need a car to complete the trip to North Conway. Let us know if you are looking for a travel buddy, and we can put guests in touch with each other.
             </p>
+          </div>
+        </section>
+
+        <section id="things-to-do" className="Things-to-do">
+          <div className="container">
+            <h2>Things to do</h2>
+            <p>
+              There are activities for everyone in North Conway! Hike, swim, shop, site-see, or play golf at Hale's Location Golf Course at the White Mountain Hotel.
+            </p>
+            <h3>Shopping and Eating</h3>
+            <p>A walk along North Main St. (Rt. 16) in North Conway will take you past eclectic shops, art galleries, the Mount Washington Observatory Weather Discovery Center, and many outdoor gear stores. You can get your coffee at the Frontside Grind or the Met Coffeehouse, or enjoy a sit-down breakfast at Stairway Cafe or Peach's. A few blocks north of River Road, Bagel's Plus is one of our favorite pre-activity breakfast/lunch places.  For dinner, The Moat Mountain Smokehouse & Brewing Company and Flatbreads are popular options.
+            </p>
+            <p> At the southern end of town, Settlers Green Outlet Village has many outlets, including an LL Bean.  Naturally, our favorite store is the climbing shop, International Mountain Equipment, which has a robust consignment section in the basement which is fun to browse.
+            </p>
+            <h3>Hiking and Outdoors</h3>
+            <p>
+              There are hikes and walks to suit every level of adventurer in the Mount Washington Valley. Trails in <a href="https://www.nhstateparks.org/visit/state-parks/echo-lake-state-park.aspx" target="_blank">Echo Lake State Park</a> can be accessed directly from the White Mountain Hotel. See a trail map <a href="https://www.nhstateparks.org/uploads/pdf/EchoLakeSP_TrailMap_Web.pdf" target="_blank">here</a>. For the more adventurous, the best hike is to take the White Horse Ledge Trail to the top of White Horse Ledge.  You can also take a side hike to the top of Cathedral Ledge along the Bryce Path. We have climbed extensively at both cliffs.  You will have pleasant views and likely see some rock-climbers as well.  For an easier hike, try the loop around Echo Lake, though you may need to pay a park entrance fee. You can also swim at the park beach or in the Saco River where is crosses under River Road (no lifeguard there). <a href="http://northconwaynh.com/dianas-baths/"target="_blank">Diana's Baths</a> is a also a really nice short walk/hike that features a series of cascading falls and pools.
+            </p>
+            <p>
+              For a more leisurely experience, you can drive to the top of Cathedral Ledge via Cathedral Ledge Road and a very short flat walk will take you to a veiwing point on the top of the cliff.
+            </p>
+            <p>
+              If you have a little more time and feel ready for a more strenuous outing, Square Ledge has possibly the best views in the valley for the least effort (.5 miles one way). If you reach the summit, you will be looking directly across Pinkham Notch into Huntington and Tuckerman Ravine on Mt. Washington. There is a short description <a href="https://www.outdoors.org/articles/blogs/current-conditions-blog/ascending-square-ledge" target="_blank">here</a> and <a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5406395.pdf" target="_blank">here</a>. Incidentally, I (Sarah) did some of my first outdoor climbing here twenty years ago!  If you do this hike, be prepared for a typical rugged New England trail, meaning rooty, rocky, possibly muddy, and steep!
+            </p>
+            <p>
+              If you want to hike one of the Presidential mountains or Mt. Washington, you will need an entire day.  Talk to us if you are interested.
+            </p>
+            <h3>Scenic Rides</h3>
+            <p>
+              Want to see the summit of Mt. Washington, but not convinced you can do it with your own legs? Drive the <a href="https://mtwashingtonautoroad.com/" target="_blank">Mt Washington Auto Road</a> or take the <a href="https://www.thecog.com/" target="_blank">Cog Railway</a> to the summit.  Bring solid shoes, a coat, and your camera!
+            </p>
+
           </div>
         </section>
 

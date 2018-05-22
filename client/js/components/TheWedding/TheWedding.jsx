@@ -90,6 +90,8 @@ export default class TheWedding extends React.Component {
           <div className="wedding__date">
             <div>
               Saturday, September 15, 2018
+              <br/>
+              Ceremony at 3:30pm
               <div className="wedding__from-now">
                 ({weddingDate.fromNow()})
               </div>
