@@ -21,6 +21,8 @@ nav {
   overflow-x: auto;
   max-width: 100%;
 
+  padding: 12px;
+
 
   // justify-content: center; this messes up the overflow-x;
   // using margins on nav__item:first/last-child instead

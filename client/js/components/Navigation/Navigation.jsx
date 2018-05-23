@@ -112,7 +112,7 @@ export default class Navigation extends React.Component {
 
     return ([
       <nav key="main" >
-        <div className="nav__container container js-nav-container" ref={el => this.container = el}>
+        <div className="nav__container js-nav-container" ref={el => this.container = el}>
           {sections.map((section, i) => {
             const classes = classNames("nav__item", {
               "is-active": section.id === activeSectionId || section.percentVisible > 0.9
