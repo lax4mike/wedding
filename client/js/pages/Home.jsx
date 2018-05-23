@@ -146,15 +146,22 @@ const Home = (props) => {
           </div>
           <Gallery />
         </section>
-        <section id="registry">
+
+        <section id="registry" className="registry">
           <div className="container">
             <h2>Registry</h2>
             <div>
               We are registered at
-              <br/>
-              <a href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=545838444&pwsurl=&searchParam=Welch%20Lambert">Bed Bath and Beyond</a>
-              <br/>
-              <a href="https://www.williams-sonoma.com/registry/rv7bv5f6zq/registry-list.html">Williams Sonoma</a>
+
+              <div className="registry__stores">
+                <a target="_blank" href="https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=545838444&pwsurl=&searchParam=Welch%20Lambert" rel="noopener noreferrer">
+                  <img src="../img/bed-bath-beyond.png" alt="Bed Bath and Beyond" />
+                </a>
+                <br/>
+                <a target="_blank" href="https://www.williams-sonoma.com/registry/rv7bv5f6zq/registry-list.html" rel="noopener noreferrer">
+                  <img src="../img/williams-sonoma.png" alt="Williams Sonoma" />
+                </a>
+              </div>
             </div>
           </div>
         </section>

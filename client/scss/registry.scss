@@ -1,0 +1,34 @@
+@import "./_variables.scss";
+
+.registry {
+
+  .container {
+    text-align: center;
+  }
+
+  img {
+    max-width: 160px;
+    margin: 12px;
+  }
+
+  .registry__stores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 48px;
+
+    a {
+      border-radius: 6px;
+      transition: all 250ms;
+      background-color: transparent;
+
+      margin: 12px;
+
+      &:hover {
+        background-color: rgba($blue, 0.1);
+      }
+    }
+  }
+
+}
