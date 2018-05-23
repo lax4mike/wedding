@@ -93,6 +93,23 @@ const Home = (props) => {
         <section id="getting-here" className="getting-here">
           <div className="container">
             <h2>Getting Here</h2>
+            <div className="getting-here__address">
+
+              <div><strong>The White Mountain Hotel</strong></div>
+              <div>87 Fairway Drive</div>
+              <div>North Conway, NH 03860</div>
+
+              <div className="getting-here__map">
+                (&nbsp;
+                <a href="https://www.google.com/maps?cid=7327877798571800783"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  map
+                </a>
+                &nbsp;)
+              </div>
+            </div>
             <p>
               Three major airports service the North Conway/Mt. Washington Valley area:
             </p>
