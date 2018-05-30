@@ -111,10 +111,6 @@ export default class TheWedding extends React.Component {
           </p>
         </div>
 
-        <div className="wedding__map">
-          <div className="map" ref={el => this.map = el} />
-        </div>
-
         <div className="wedding__map-link">
           <a href={R.prop("url", placeInfo)}
             className="btn btn--external"
@@ -124,6 +120,11 @@ export default class TheWedding extends React.Component {
             <RightArrow />
           </a>
         </div>
+          
+        <div className="wedding__map">
+          <div className="map" ref={el => this.map = el} />
+        </div>
+
       </div>
     );
   }
